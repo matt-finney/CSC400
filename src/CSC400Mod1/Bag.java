@@ -3,6 +3,14 @@ package CSC400Mod1;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+    CSC400 Module 1
+    Matthew Finney
+    Creating a generic Bag class that allows duplicates and tracks counts of each item.
+    Also includes methods to add, remove, check if it contains an item, and count items.
+    https://github.com/matt-finney/CSC400
+*/
+
 public class Bag<T> 
 {
     // Stores each item and how many times it occurs
