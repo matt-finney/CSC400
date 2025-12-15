@@ -1,5 +1,13 @@
 package CSC400Mod1;
 
+/*
+    CSC400 Module 1
+    Matthew Finney
+    Creating a generic Bag class and testing it through various adding and removing.
+
+    https://github.com/matt-finney/CSC400
+*/
+
 public class Module1 
 {
     public static void main(String[] args) 
