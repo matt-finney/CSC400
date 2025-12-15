@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Module1",
+            "request": "launch",
+            "mainClass": "CSC400Mod1.Module1",
+            "projectName": "CSC400_5890f243"
+        }
+    ]
+}
