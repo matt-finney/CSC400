@@ -6,7 +6,7 @@ import java.util.Map;
 /*
     CSC400 Module 2
     Matthew Finney
-    Extended generic Bag class with size, merge, and distinct methods.
+    Extending the Bag class from Module 1 with size, merge, and distinct methods.
     
     https://github.com/matt-finney/CSC400
 */
