@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Module2",
+            "request": "launch",
+            "mainClass": "CSC400Mod2.Module2",
+            "projectName": "CSC400_c7fad297"
+        },
+        {
+            "type": "java",
             "name": "Module1",
             "request": "launch",
             "mainClass": "CSC400Mod1.Module1",
