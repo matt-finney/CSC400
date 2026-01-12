@@ -1,5 +1,9 @@
 package CSC400Mod4;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 /*
     CSC400 Module 4
     Matthew Finney
@@ -47,6 +51,38 @@ public class Module4
         {
             System.out.println("Error: " + ex.getMessage());
         }
+
+        System.out.println();
+        System.out.println("Reading expressions from file...");
+
+        // Read expressions from a text file and evaluate each
+        String filename = "expressions.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) 
+        {
+            String line;
+            int lineNumber = 1;
+            // Read each line and evaluate the expression
+            while ((line = reader.readLine()) != null) 
+            {
+                line = line.trim();
+                if (!line.isEmpty()) 
+                {
+                    try 
+                    {
+                        int result = calculator.evaluatePostfix(line);
+                        System.out.println("File Expression " + lineNumber + ": " + line + " = " + result);
+                    } catch (IllegalArgumentException e) 
+                    {
+                        System.out.println("File Expression " + lineNumber + ": " + line + " = Error: " + e.getMessage());
+                    }
+                }
+                lineNumber++;
+            }
+        } catch (IOException e) 
+        {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+        
     }
 }
 
