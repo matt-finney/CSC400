@@ -14,6 +14,12 @@ public class RadixSort {
     
     public static void radixSort(int arr[])
     {
+        // handle null or empty arrays to prevent potential edge cases
+        if (arr == null || arr.length == 0) 
+        {
+            return;
+        }
+
         int size = arr.length;
         // get the max value inside the array
         int max = getMax(arr, size);
