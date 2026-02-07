@@ -23,10 +23,11 @@ public class Module8
         try (Scanner scanner = new Scanner(System.in)) 
         {
             System.out.println("Please enter 5 people one by one (Ex: John Doe 30): ");
-            for (int i = 0; i < 5; i++)
+            int count = 0;
+            while (count < 5)
             {
                 // prompt user for input and read the line
-                System.out.print("Person " + (i + 1) + ": ");
+                System.out.print("Person " + (count + 1) + ": ");
                 String input = scanner.nextLine();
                 // split input into parts and validate based on expected format
                 String[] parts = input.split(" ");
@@ -34,7 +35,6 @@ public class Module8
                 if (parts.length != 3)
                 {
                     System.out.println("Invalid input format. Please enter in the format: FirstName LastName Age");
-                    i--; // decrement i to retry this iteration
                     continue;
                 }
 
@@ -44,7 +44,6 @@ public class Module8
                 if (!isValidName(first_name) || !isValidName(last_name)) 
                 {
                     System.out.println("Invalid name. Names should only contain letters, hyphens, or spaces.");
-                    i--; // decrement i to retry this iteration
                     continue;
                 }
 
@@ -57,11 +56,11 @@ public class Module8
                 catch (NumberFormatException e) 
                 {
                     System.out.println("Invalid age. Please enter a valid integer for age.");
-                    i--; // decrement i to retry this iteration
                     continue;
                 }
                 // add the person to the queue after successful validation checks
                 queue.enqueue(new Person(first_name, last_name, age));
+                count++;
             }
 
             // display the content of the queue
