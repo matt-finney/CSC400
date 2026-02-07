@@ -52,6 +52,11 @@ public class Module8
                 try 
                 {
                     age = Integer.parseInt(parts[2]);
+                    if (age <= 0) 
+                    {
+                        System.out.println("Invalid age. Age must be greater than zero.");
+                        continue;
+                    }
                 } 
                 catch (NumberFormatException e) 
                 {
@@ -80,6 +85,7 @@ public class Module8
                 System.out.println("1. Sort by last name (descending)");
                 System.out.println("2. Sort by age (descending)");
                 System.out.println("3. Exit");
+                System.out.print("Enter your choice (1, 2, or 3): ");
 
                 // validate user input for sorting choice
                 while (!scanner.hasNextInt())
