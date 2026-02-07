@@ -21,8 +21,8 @@ public class Person
     // constructor
     public Person(String first_name, String last_name, int age) 
     {
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.first_name = first_name.toLowerCase();
+        this.last_name = last_name.toLowerCase();
         this.age = age;
     }
 
@@ -45,12 +45,12 @@ public class Person
     // setters
     public void setFirst_name(String first_name) 
     {
-        this.first_name = first_name;
+        this.first_name = first_name.toLowerCase();
     }
 
     public void setLast_name(String last_name) 
     {
-        this.last_name = last_name;
+        this.last_name = last_name.toLowerCase();
     }
 
     public void setAge(int age) 
