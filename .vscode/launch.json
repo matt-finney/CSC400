@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Module8Discussion",
+            "request": "launch",
+            "mainClass": "CSC400Mod8.Module8Discussion",
+            "projectName": "CSC400_c7fad297"
+        },
+        {
+            "type": "java",
+            "name": "Module8",
+            "request": "launch",
+            "mainClass": "CSC400Mod8.Module8",
+            "projectName": "CSC400_c7fad297"
+        },
+        {
+            "type": "java",
             "name": "Discussion7Example",
             "request": "launch",
             "mainClass": "CSC400Mod7.Discussion7Example",
